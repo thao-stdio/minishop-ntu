@@ -8,11 +8,11 @@
 
 | Mục | Kết quả |
 |---|---|
-| Phiên bản Node.js (`node -v`) | | v24.21.0
-| Phiên bản npm (`npm -v`) | | 11.19.0
-| Phiên bản Git (`git --version`) | | git version 2.55.0.windows.5
-| Hệ điều hành | | windows 10
-| Kết quả `npm run lint` (số error / warning) | | 16 errors / 3 warnings
+| Phiên bản Node.js (`node -v`) |  v24.21.0 |
+| Phiên bản npm (`npm -v`) | 11.19.0 |
+| Phiên bản Git (`git --version`) | git version 2.55.0.windows.5 |
+| Hệ điều hành | windows 10 |
+| Kết quả `npm run lint` (số error / warning) | 16 errors / 3 warnings |
 
 Ảnh chụp màn hình (chèn ảnh hoặc đặt file ảnh trong thư mục `bai-nop/hinh/` rồi dẫn link):
 
@@ -24,30 +24,31 @@
 
 | Câu hỏi | Trả lời |
 |---|---|
-| Kết quả thực tế | | Đăng ký thành công
-| Kết quả mong đợi (theo SRS, ghi rõ mục) | | FR-01.3	Người dùng phải trên 18 tuổi mới được đăng ký
-| Có phải failure không? Vì sao? | | có, vì theo yêu cầu phải đủ 18 tuổi mới được đăng ký, trường hợp trên người dùng khai báo mới 17 nhưng vẫn đăng ký được
-| Defect nằm ở đâu (file, số dòng, đoạn mã) | | registration.js, 18, } else if (ageNumber < 17 || ageNumber > 100) {
-| Error nào của con người có thể đã gây ra defect này? | | Lập trình viên hiểu hoặc triển khai sai yêu cầu về độ tuổi tối thiểu, viết điều kiện ageNumber < 17 thay vì ageNumber < 18, dẫn đến việc cho phép người dùng 17 tuổi đăng ký.
+| Kết quả thực tế | Đăng ký thành công |
+| Kết quả mong đợi (theo SRS, ghi rõ mục) | FR-01.3	Người dùng phải trên 18 tuổi mới được đăng ký |
+| Có phải failure không? Vì sao? |có, vì theo yêu cầu phải đủ 18 tuổi mới được đăng ký, trường hợp trên người dùng khai báo mới 17 nhưng vẫn đăng ký được |
+| Defect nằm ở đâu (file, số dòng, đoạn mã) | registration.js, 18, } else if (ageNumber < 17 || ageNumber > 100) { |
+| Error nào của con người có thể đã gây ra defect này? | Lập trình viên hiểu hoặc triển khai sai yêu cầu về độ tuổi tối thiểu, viết điều kiện ageNumber < 17 thay vì ageNumber < 18, dẫn đến việc cho phép người dùng 17 tuổi đăng ký |
 
 ## 3. Kịch bản 2 – Đơn hàng 500.000đ, nội thành
 
 | Câu hỏi | Trả lời |
 |---|---|
-| Tạm tính | | 500.000đ
-| Phí vận chuyển hệ thống tính | | 20.000đ
-| Theo FR-04.2, phí đúng phải là | | Đơn hàng có tạm tính trên 500.000đ được miễn phí vận chuyển --> 20.000đ
-| Theo Phụ lục A, phí đúng phải là | | 0đ
-| Hệ thống đúng hay sai? Có kết luận được không? Vì sao? | | Chưa thể kết luận hệ thống đúng hay sai chỉ dựa trên hai tài liệu, vì FR-04.2 và Phụ lục A mâu thuẫn nhau tại trường hợp tạm tính đúng 500.000đ
-| Defect (nếu có) nằm ở đâu: mã nguồn hay tài liệu? | | Chưa thể kết luận
+| Tạm tính | 500.000đ |
+| Phí vận chuyển hệ thống tính | 20.000đ |
+| Theo FR-04.2, phí đúng phải là | 20.000đ |
+| Theo Phụ lục A, phí đúng phải là | 0đ |
+| Hệ thống đúng hay sai? Có kết luận được không? Vì sao? | Chưa thể kết luận hệ thống đúng hay sai chỉ dựa trên hai tài liệu, vì FR-04.2 và Phụ lục A mâu thuẫn nhau tại trường hợp tạm tính đúng 500.000đ |
+| Defect (nếu có) nằm ở đâu: mã nguồn hay tài liệu? |Chưa thể kết luận|
 
 ## 4. Kịch bản 3 – Tự khám phá
 
 | Mục | Nội dung |
 |---|---|
-| Chức năng | | Đăng nhập và khóa tài khoản khi nhập sai mật khẩu nhiều lần
-| Các bước thực hiện | 1. <br> 2. <br> 3. | | 1. Mở chức năng Đăng nhập và nhập email `sv@ntu.edu.vn` với mật khẩu sai. <br> 2. Thực hiện đăng nhập sai liên tiếp lần thứ 2 và lần thứ 3. <br> 3. Sau lần sai thứ 3, nhập lại mật khẩu đúng `Matkhau123` để kiểm tra tài khoản có bị khóa hay không
-| Dữ liệu sử dụng | | Email: `sv@ntu.edu.vn`; mật khẩu sai: `Sai123`; mật khẩu đúng: `Matkhau123`; số lần đăng nhập sai: 3 lần 
-| Kết quả mong đợi (căn cứ: mục nào của SRS) | | Sau 3 lần đăng nhập sai liên tiếp, tài khoản bị khóa và không thể đăng nhập bằng mật khẩu đúng
-| Kết quả thực tế | | Sau lần đăng nhập sai thứ 3, hệ thống khóa tài khoản; khi nhập lại mật khẩu đúng, hệ thống không cho đăng nhập
-| Nhận định (failure? mức độ?) | | Nếu hệ thống khóa đúng thì không phát hiện failure
+| Chức năng | Đăng nhập và khóa tài khoản khi nhập sai mật khẩu nhiều lần |
+| Các bước thực hiện | 1. <br> 2. <br> 3. | 1. Mở chức năng Đăng nhập và nhập email `sv@ntu.edu.vn` với mật khẩu sai. <br> 2. Thực hiện đăng nhập sai liên tiếp lần thứ 2 và lần thứ 3. <br> 3. Sau lần sai thứ 3, nhập lại mật khẩu đúng `Matkhau123` để kiểm tra tài khoản có bị khóa hay không |
+| Dữ liệu sử dụng | Email: `sv@ntu.edu.vn`; mật khẩu sai: `Sai123`; mật khẩu đúng: `Matkhau123`; số lần đăng nhập sai: 3 lần |
+| Kết quả mong đợi (căn cứ: mục nào của SRS) | Sau 3 lần đăng nhập sai liên tiếp, tài khoản bị khóa và không thể đăng nhập bằng mật khẩu đúng |
+| Kết quả thực tế | Sau lần đăng nhập sai thứ 3, hệ thống khóa tài khoản; khi nhập lại mật khẩu đúng, hệ thống không cho đăng nhập |
+| Nhận định (failure? mức độ?) | Nếu hệ thống khóa đúng thì không phát hiện failure |
+
