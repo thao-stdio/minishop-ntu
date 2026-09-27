@@ -4,11 +4,11 @@
 
 | Mục | Nội dung |
 |---|---|
-| Họ tên | |
-| MSSV | |
-| Tài liệu được review | MSN-SRS – Đặc tả yêu cầu MiniShop NTU, phiên bản 1.0 |
+| Họ tên |  Nguyễn Thị Ngọc Thảo |
+| MSSV |  65133282 |
+| Tài liệu được review | MSN-SRS – Đặc tả yêu cầu MiniShop NTU, phiên bản 1.0 | 
 | Loại review | Review theo checklist (cá nhân) |
-| Ngày | |
+| Ngày |  27/9/2026 |
 | Bước 1 – Khởi động | từ …… đến …… |
 | Bước 2 – Đọc lần 1 (theo trình tự) | từ …… đến …… |
 | Bước 3 – Đọc lần 2 (đối chiếu chéo) | từ …… đến …… |
