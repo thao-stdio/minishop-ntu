@@ -42,10 +42,7 @@ Phân loại: **DEFECT** (chắc chắn gây sai/dừng chương trình) · **SM
 ## 3. Sau khi sửa
 
 Kết quả `npm run lint:lab` sau khi sửa (ảnh chụp hoặc dán kết quả):
-
-```
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/090e78ef-073a-4d88-a11a-389f9b56a190" />
-```
 
 ## 4. Lỗi logic ESLint không phát hiện được
 
