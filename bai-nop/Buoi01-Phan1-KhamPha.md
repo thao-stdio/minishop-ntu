@@ -24,28 +24,28 @@
 
 | Câu hỏi | Trả lời |
 |---|---|
-| Kết quả thực tế | |
-| Kết quả mong đợi (theo SRS, ghi rõ mục) | |
-| Có phải failure không? Vì sao? | |
-| Defect nằm ở đâu (file, số dòng, đoạn mã) | |
-| Error nào của con người có thể đã gây ra defect này? | |
+| Kết quả thực tế | | Đăng ký thành công
+| Kết quả mong đợi (theo SRS, ghi rõ mục) | | FR-01.3	Người dùng phải trên 18 tuổi mới được đăng ký
+| Có phải failure không? Vì sao? | | có, vì theo yêu cầu phải đủ 18 tuổi mới được đăng ký, trường hợp trên người dùng khai báo mới 17 nhưng vẫn đăng ký được
+| Defect nằm ở đâu (file, số dòng, đoạn mã) | | registration.js, 18, } else if (ageNumber < 17 || ageNumber > 100) {
+| Error nào của con người có thể đã gây ra defect này? | | Lập trình viên hiểu hoặc triển khai sai yêu cầu về độ tuổi tối thiểu, viết điều kiện ageNumber < 17 thay vì ageNumber < 18, dẫn đến việc cho phép người dùng 17 tuổi đăng ký.
 
 ## 3. Kịch bản 2 – Đơn hàng 500.000đ, nội thành
 
 | Câu hỏi | Trả lời |
 |---|---|
-| Tạm tính | |
-| Phí vận chuyển hệ thống tính | |
-| Theo FR-04.2, phí đúng phải là | |
-| Theo Phụ lục A, phí đúng phải là | |
-| Hệ thống đúng hay sai? Có kết luận được không? Vì sao? | |
-| Defect (nếu có) nằm ở đâu: mã nguồn hay tài liệu? | |
+| Tạm tính | | 500.000đ
+| Phí vận chuyển hệ thống tính | | 20.000đ
+| Theo FR-04.2, phí đúng phải là | | Đơn hàng có tạm tính trên 500.000đ được miễn phí vận chuyển --> 20.000đ
+| Theo Phụ lục A, phí đúng phải là | | 0đ
+| Hệ thống đúng hay sai? Có kết luận được không? Vì sao? | | Chưa thể kết luận hệ thống đúng hay sai chỉ dựa trên hai tài liệu, vì FR-04.2 và Phụ lục A mâu thuẫn nhau tại trường hợp tạm tính đúng 500.000đ
+| Defect (nếu có) nằm ở đâu: mã nguồn hay tài liệu? | | Chưa thể kết luận
 
 ## 4. Kịch bản 3 – Tự khám phá
 
 | Mục | Nội dung |
 |---|---|
-| Chức năng | |
+| Chức năng | | Đăng nhập và khóa tài khoản khi nhập sai mật khẩu nhiều lần
 | Các bước thực hiện | 1. <br> 2. <br> 3. |
 | Dữ liệu sử dụng | |
 | Kết quả mong đợi (căn cứ: mục nào của SRS) | |
