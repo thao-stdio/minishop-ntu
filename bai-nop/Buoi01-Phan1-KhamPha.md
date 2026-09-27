@@ -46,7 +46,7 @@
 | Mục | Nội dung |
 |---|---|
 | Chức năng | Đăng nhập và khóa tài khoản khi nhập sai mật khẩu nhiều lần |
-| Các bước thực hiện | 1. <br> 2. <br> 3. | 1. Mở chức năng Đăng nhập và nhập email `sv@ntu.edu.vn` với mật khẩu sai. <br> 2. Thực hiện đăng nhập sai liên tiếp lần thứ 2 và lần thứ 3. <br> 3. Sau lần sai thứ 3, nhập lại mật khẩu đúng `Matkhau123` để kiểm tra tài khoản có bị khóa hay không |
+| Các bước thực hiện | 1. Mở chức năng Đăng nhập và nhập email `sv@ntu.edu.vn` với mật khẩu sai. <br> 2. Thực hiện đăng nhập sai liên tiếp lần thứ 2 và lần thứ 3. <br> 3. Sau lần sai thứ 3, nhập lại mật khẩu đúng `Matkhau123` để kiểm tra tài khoản có bị khóa hay không |
 | Dữ liệu sử dụng | Email: `sv@ntu.edu.vn`; mật khẩu sai: `Sai123`; mật khẩu đúng: `Matkhau123`; số lần đăng nhập sai: 3 lần |
 | Kết quả mong đợi (căn cứ: mục nào của SRS) | Sau 3 lần đăng nhập sai liên tiếp, tài khoản bị khóa và không thể đăng nhập bằng mật khẩu đúng |
 | Kết quả thực tế | Sau lần đăng nhập sai thứ 3, hệ thống khóa tài khoản; khi nhập lại mật khẩu đúng, hệ thống không cho đăng nhập |
